@@ -69,7 +69,7 @@ function ImageViewing({
   FooterComponent,
   ref,
 }: Props) {
-  const imageList = ref ?? useRef<VirtualizedList<ImageSource>>(null);
+  const imageList = ref ? ref : useRef<VirtualizedList<ImageSource>>(null);
   const [opacity, onRequestCloseEnhanced] = useRequestClose(onRequestClose);
   const [currentImageIndex, onScroll] = useImageIndexChange(imageIndex, SCREEN);
   const [headerTransform, footerTransform, toggleBarsVisible] =
