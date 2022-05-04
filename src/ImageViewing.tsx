@@ -42,7 +42,7 @@ type Props = {
   delayLongPress?: number;
   HeaderComponent?: ComponentType<{ imageIndex: number }>;
   FooterComponent?: ComponentType<{ imageIndex: number }>;
-  ref?: MutableRefObject<VirtualizedList>;
+  ref?: MutableRefObject<VirtualizedList<ImageSource>>;
 };
 
 const DEFAULT_ANIMATION_TYPE = "fade";
